@@ -7,7 +7,7 @@ export default function Hero() {
             <div className="text-center">
 
                 <h1 className="text-6xl font-bold">
-                    Eric John A. Peña
+                    Eric John Peña
                 </h1>
 
                 <p className="text-xl text-gray-700 dark:text-gray-300 mt-4">
