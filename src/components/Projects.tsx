@@ -18,7 +18,7 @@ description: "Educational game."
 
 export default function Projects() {
 return (
-<section id="projects" className="py-20">
+<section id="projects" className="py-20 px-4 bg-white dark:bg-slate-950 text-black dark:text-white">
 
 <div className="max-w-5xl mx-auto">
 
@@ -31,17 +31,17 @@ Projects
 {projects.map(project => (
 <div
 key={project.title}
-className="border rounded-xl p-6 shadow"
+className="border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow"
 >
 <h3 className="text-2xl font-bold">
 {project.title}
 </h3>
 
-<p className="text-blue-600">
+<p className="text-blue-600 dark:text-blue-400">
 {project.tech}
 </p>
 
-<p className="mt-3">
+<p className="mt-3 text-gray-700 dark:text-gray-300">
 {project.description}
 </p>
 </div>

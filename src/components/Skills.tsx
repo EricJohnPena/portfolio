@@ -15,7 +15,8 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="py-20 bg-gray-50"
+            className="py-20 px-4
+  bg-gray-50 dark:bg-slate-900"
         >
             <div className="max-w-5xl mx-auto">
 
@@ -28,7 +29,11 @@ export default function Skills() {
                     {skills.map(skill => (
                         <span
                             key={skill}
-                            className="px-4 py-2 bg-white shadow rounded"
+                            className="px-4 py-2
+                            bg-white dark:bg-slate-800
+                            text-black dark:text-white
+                            rounded
+                            shadow"
                         >
                             {skill}
                         </span>
