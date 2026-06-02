@@ -213,7 +213,18 @@ Error generating stack: `+e.message+`
                 bg-gray-50
                 dark:bg-slate-900
                 text-black
-                dark:text-white`,children:(0,O.jsxs)(`div`,{className:`max-w-5xl mx-auto`,children:[(0,O.jsx)(`h2`,{className:`text-4xl font-bold mb-6`,children:`Contact`}),(0,O.jsx)(`p`,{className:`text-gray-700 dark:text-gray-300`,children:`eric.john.pena@gmail.com`}),(0,O.jsx)(`p`,{className:`text-gray-700 dark:text-gray-300`,children:`+63 947 430 0125`}),(0,O.jsx)(`p`,{className:`text-gray-700 dark:text-gray-300`,children:`Cavite, Philippines`}),(0,O.jsx)(`div`,{className:`mt-6`,children:(0,O.jsxs)(`a`,{href:`/resume/Eric_John_Pena_Resume.pdf`,download:!0,className:`
+                dark:text-white`,children:(0,O.jsxs)(`div`,{className:`max-w-5xl mx-auto`,children:[(0,O.jsx)(`h2`,{className:`text-4xl font-bold mb-6`,children:`Contact`}),(0,O.jsx)(`p`,{className:`text-gray-700 dark:text-gray-300`,children:`eric.john.pena@gmail.com`}),(0,O.jsx)(`p`,{className:`text-gray-700 dark:text-gray-300`,children:`+63 947 430 0125`}),(0,O.jsx)(`p`,{className:`text-gray-700 dark:text-gray-300`,children:`Cavite, Philippines`}),(0,O.jsx)(`div`,{className:`mt-6`,children:(0,O.jsx)(`a`,{href:`/portfolio/resume/Eric_John_Pena_Resume.pdf`,target:`_blank`,rel:`noopener noreferrer`,className:`
+                    inline-flex
+                    items-center
+                    gap-2
+                    bg-blue-600
+                    text-white
+                    px-5
+                    py-3
+                    rounded-lg
+                    hover:bg-blue-700
+                    transition
+                    `,children:`View Resume`})}),(0,O.jsx)(`div`,{className:`mt-6`,children:(0,O.jsxs)(`a`,{href:`/portfolio/resume/Eric_John_Pena_Resume.pdf`,download:!0,className:`
                     inline-flex
                     items-center
                     gap-2
