@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaTimes, FaChevronLeft, FaChevronRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 interface Screenshot {
@@ -211,37 +211,38 @@ export default function ProjectModal({
             
 
             <div className="flex gap-4 mt-6">
-              {project.github && (
+            {project.github && (
                 <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              className="
+                px-4 py-2
+                rounded-lg
+                bg-blue-600
+                text-white
+                hover:bg-blue-700
+                "
+                >
+                GitHub
+                </a>
+            )}
+
+            {project.demo && (
+                <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
                     bg-blue-600
                     text-white
                     px-4 py-2
                     rounded-lg
-                  "
+                "
                 >
-                  GitHub
+                Live Demo
                 </a>
-              )}
-
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="
-                    border border-black dark:border-white
-                    px-4 py-2
-                    rounded-lg
-                    text-black dark:text-white
-                  "
-                >
-                  Live Demo
-                </a>
-              )}
+            )}
             </div>
           </motion.div>
         </>

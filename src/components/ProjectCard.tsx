@@ -64,14 +64,15 @@ export default function ProjectCard({
         whileHover={{ scaleX: 1 }}
         transition={{ duration: 0.3 }}
       />
-      <div className="overflow-hidden rounded-xl mb-5">
+      <div className="overflow-hidden rounded-xl mb-5 bg-slate-100 dark:bg-slate-700">
   <motion.img
     src={image}
     alt={title}
     className="
       w-full
       h-52
-      object-cover
+      object-contain
+      p-4
     "
     whileHover={{
       scale: 1.08,
@@ -115,21 +116,21 @@ export default function ProjectCard({
 
           {demo && (
             <a
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="
                 px-4 py-2
                 rounded-lg
-                border border-black dark:border-white
-                text-black dark:text-white
-                hover:bg-gray-100
-                dark:hover:bg-slate-700
-              "
+                bg-blue-600
+                text-white
+                hover:bg-blue-700
+            "
             >
-              Demo
+            Live Demo
             </a>
-          )}
+        )}
         </div>
       )}
     </motion.div>
