@@ -4,6 +4,8 @@ interface ProjectCardProps {
   title: string;
   tech: string;
   description: string;
+  image: string;
+  onClick: () => void;
   github?: string;
   demo?: string;
 }
@@ -12,11 +14,14 @@ export default function ProjectCard({
   title,
   tech,
   description,
+  image,
+  onClick,
   github,
   demo,
 }: ProjectCardProps) {
   return (
     <motion.div
+    onClick={onClick}
       variants={{
         hidden: {
           opacity: 0,
@@ -59,6 +64,23 @@ export default function ProjectCard({
         whileHover={{ scaleX: 1 }}
         transition={{ duration: 0.3 }}
       />
+      <div className="overflow-hidden rounded-xl mb-5">
+  <motion.img
+    src={image}
+    alt={title}
+    className="
+      w-full
+      h-52
+      object-cover
+    "
+    whileHover={{
+      scale: 1.08,
+    }}
+    transition={{
+      duration: 0.4,
+    }}
+  />
+</div>
 
       <h3 className="text-2xl text-black dark:text-white font-bold mb-2">
         {title}
