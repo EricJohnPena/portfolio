@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTimes, FaChevronLeft, FaChevronRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaTimes, FaChevronLeft, FaChevronRight} from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 interface Screenshot {
@@ -130,7 +130,8 @@ export default function ProjectModal({
                 alt={selectedScreenshot.caption || project.title}
                 className="
                   w-full
-                  h-full
+                  h-56
+  md:h-[400px]
                   object-contain
                   p-4
                 "

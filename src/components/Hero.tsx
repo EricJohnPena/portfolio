@@ -8,20 +8,40 @@ export default function Hero() {
                 text-black dark:text-white">
             <div className="text-center">
 
-                <h1 className="text-6xl font-bold">
+                <h1
+  className="
+    text-4xl
+    sm:text-5xl
+    md:text-6xl
+    lg:text-7xl
+    font-bold
+  "
+>
                     Eric John Peña
                 </h1>
 
-                <p className="text-xl text-gray-700 dark:text-gray-300 mt-4">
+                <p className="text-base text-gray-700 dark:text-gray-300 px-6 text-base
+    md:text-lg
+    max-w-2xl
+    mx-auto mt-4">
                     Aspiring Software Engineer
                 </p>
 
-                <p className="mt-4 max-w-xl mx-auto text-gray-700 dark:text-gray-300">
+                <p className="mt-4 text-gray-700 dark:text-gray-300 px-6
+    text-base
+    md:text-lg
+    max-w-2xl
+    mx-auto">
                     Building modern web applications,
                     mobile apps, and software solutions.
                 </p>
 
-                <div className="mt-8 flex gap-4 justify-center">
+                <div className="mt-8
+    flex
+    flex-col
+    sm:flex-row
+    gap-4
+    justify-center">
 
                     <a
                         href="#projects"

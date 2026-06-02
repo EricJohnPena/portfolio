@@ -27,9 +27,7 @@ export default function Contact() {
                 <p className="text-gray-700 dark:text-gray-300">
                     Cavite, Philippines
                 </p>
-
-            </div>
-            <div className="mt-6">
+<div className="mt-6">
                 <a
                     href="/resume/Eric_John_Pena_Resume.pdf"
                     download
@@ -50,6 +48,8 @@ export default function Contact() {
                     Download Resume
                 </a>
                 </div>
+            </div>
+            
         </section>
     )
 }

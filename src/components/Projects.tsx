@@ -151,7 +151,8 @@ export default function Projects() {
     <section
       id="projects"
       className="
-        py-24
+        py-16
+    md:py-24
         bg-gray-50 dark:bg-slate-900
       "
     >
@@ -221,10 +222,10 @@ export default function Projects() {
             onClick={prevSlide}
             className="
               absolute
-              left-0
+              left-2 sm:left-0
               top-1/2
               -translate-y-1/2
-              -translate-x-14
+              sm:-translate-x-14
               rounded-full
               bg-blue-600 text-white
               p-3
@@ -242,10 +243,10 @@ export default function Projects() {
             onClick={nextSlide}
             className="
               absolute
-              right-0
+              right-2 sm:right-0
               top-1/2
               -translate-y-1/2
-              translate-x-14
+              sm:translate-x-14
               rounded-full
               bg-blue-600 text-white
               p-3

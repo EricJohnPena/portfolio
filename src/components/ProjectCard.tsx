@@ -71,6 +71,8 @@ export default function ProjectCard({
     className="
       w-full
       h-52
+      md:h-52
+      lg:h-56
       object-contain
       p-4
     "
