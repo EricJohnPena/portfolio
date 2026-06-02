@@ -1,3 +1,5 @@
+import { FaDownload } from "react-icons/fa";
+
 export default function Hero() {
     return (
         <section className="min-h-screen
@@ -27,12 +29,38 @@ export default function Hero() {
                     >
                         View Projects
                     </a>
+                    
+                    <a
+                        href={`${import.meta.env.BASE_URL}resume/Eric_John_Pena_Resume.pdf`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                        bg-blue-600
+                        text-white
+                        px-6 py-3
+                        rounded-lg
+                        "
+                    >
+                        View Resume
+                    </a>
 
                     <a
-                        href="/resume.pdf"
-                        className="border border-black dark:border-white text-black dark:text-white px-6 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800"
+                    href={`${import.meta.env.BASE_URL}resume/Eric_John_Pena_Resume.pdf`}
+                    download
+                    className="
+                        border
+                        border-gray-300
+                        dark:border-gray-600
+                        px-6 py-3
+                        rounded-lg
+                        hover:bg-gray-100
+                        dark:hover:bg-slate-800
+                        transition
+                        flex items-center gap-2
+                    "
                     >
-                        Resume
+                    <FaDownload />
+                    Resume
                     </a>
 
                 </div>

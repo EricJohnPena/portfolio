@@ -1,3 +1,5 @@
+import { FaDownload } from "react-icons/fa";
+
 export default function Contact() {
     return (
         <section
@@ -27,6 +29,27 @@ export default function Contact() {
                 </p>
 
             </div>
+            <div className="mt-6">
+                <a
+                    href="/resume/Eric_John_Pena_Resume.pdf"
+                    download
+                    className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    bg-blue-600
+                    text-white
+                    px-5
+                    py-3
+                    rounded-lg
+                    hover:bg-blue-700
+                    transition
+                    "
+                >
+                    <FaDownload />
+                    Download Resume
+                </a>
+                </div>
         </section>
     )
 }
