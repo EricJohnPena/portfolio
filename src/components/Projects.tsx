@@ -1,54 +1,92 @@
+import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
+
 const projects = [
-{
-title: "Banking Web App",
-tech: "Spring Boot, PostgreSQL",
-description: "Online banking system."
-},
-{
-title: "POS System",
-tech: "PHP, MySQL",
-description: "Mini Donuts POS."
-},
-{
-title: "Lexia: Vocabulary Learning App",
-tech: "Unity, Firebase",
-description: "Educational game."
-}
-]
+  {
+    title: "Ledge-it: Banking Web App",
+    tech: "Spring Boot, PostgreSQL, Thymeleaf",
+    description:
+      "Secure banking application with authentication, account management, and transaction history.",
+    github: "https://github.com/EricJohnPena/banking-app-web",
+    demo: "https://github.com/EricJohnPena/banking-app-web",
+  },
+  {
+    title: "Sweet Swirl POS System",
+    tech: "PHP, MySQL, Bootstrap",
+    description:
+      "Point-of-sale system with inventory and sales management.",
+      github: "https://github.com/EricJohnPena/pos",
+  },
+  {
+    title: "Vocabulary Learning App",
+    tech: "Unity, Firebase",
+    description:
+      "Lexia: Educational game with word scrambles and student progress tracking.",
+      github: "https://github.com/EricJohnPena/Lexia-UI",
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 export default function Projects() {
-return (
-<section id="projects" className="py-20 px-4 bg-white dark:bg-slate-950 text-black dark:text-white">
+  return (
+    <section
+      id="projects"
+      className="
+        py-24
+        bg-gray-50 dark:bg-slate-900
+      "
+    >
+      <div className="max-w-6xl mx-auto px-6">
 
-<div className="max-w-5xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          className="
+            text-4xl font-bold
+            text-center
+            text-black dark:text-white
+            mb-12
+          "
+        >
+          Featured Projects
+        </motion.h2>
 
-<h2 className="text-4xl font-bold mb-8">
-Projects
-</h2>
+        <motion.div
+          className="
+            grid
+            md:grid-cols-2
+            lg:grid-cols-3
+            gap-8
+          "
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+        >
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              {...project}
+            />
+          ))}
+        </motion.div>
 
-<div className="grid md:grid-cols-2 gap-6">
-
-{projects.map(project => (
-<div
-key={project.title}
-className="border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 rounded-xl p-6 shadow"
->
-<h3 className="text-2xl font-bold">
-{project.title}
-</h3>
-
-<p className="text-blue-600 dark:text-blue-400">
-{project.tech}
-</p>
-
-<p className="mt-3 text-gray-700 dark:text-gray-300">
-{project.description}
-</p>
-</div>
-))}
-
-</div>
-</div>
-</section>
-)
+      </div>
+    </section>
+  );
 }
